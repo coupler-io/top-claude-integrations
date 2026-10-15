@@ -2,7 +2,7 @@
 title: Connect Xero to Claude with Coupler.io
 slug: connect-xero-to-claude
 canonical: https://github.com/coupler-io/top-claude-integrations/blob/main/connect-xero-to-claude.md
-source: Xero
+source: Xero, Xero Reports
 destination: Claude
 meta_title: Connect Xero to Claude with Coupler.io
 meta_description: Send Xero Invoices, Bank transactions, Contacts, and Pay runs to Claude and ask about cash, tax, and payroll in plain language.
@@ -16,7 +16,7 @@ Xero splits an organisation across invoices, bank lines, payroll, and projects, 
 
 ## How to export Xero data to Claude
 
-Each flow carries one entity from the tenant you pick. The wizard covers accounting, UK and New Zealand payroll, Australia payroll, and projects. Simple is the default Report type and is available for every entity. Detailed is available for Bank transactions, Contacts, Credit notes, Invoices, Manual journals, Overpayments, and Prepayments. Every entity name is listed in the catalogue further down.
+Each flow carries one category from the tenant you pick. The steps below are the Xero connector: accounting, UK and New Zealand payroll, Australia payroll, and projects. Simple is the default Report type on that connector and is available for every entity. Detailed is available for Bank transactions, Contacts, Credit notes, Invoices, Manual journals, Overpayments, and Prepayments. Statements are a second connector, Xero Reports. There, Basic settings are **Xero tenant**, **Report type**, and **Report structure**. The other steps are Contact (**Contact ID**), Bank account (**Bank Account ID**), Report period (**Date**, **Start date**, **End date**), and Parameters, including **Number of periods to compare**, **Period**, the tracking category and option IDs, **Include cash transactions only**, and **Standard layout**. Every name is listed further down.
 
 ### Step 1. Basic settings
 
@@ -86,7 +86,7 @@ Data entity, Report type, Projects, and the date filters can follow the prompt. 
 
 ## What data can you export from Xero to Claude with Coupler.io?
 
-The catalogue below is the full set: 26 accounting entities, 12 payroll entities for the UK and New Zealand, 15 payroll entities for Australia, and 4 project entities. Leave types, Pay runs, and Timesheets appear in both payroll lists because each region exposes them. One flow handles one entity. Coupler.io's Join can stitch two entities before either entity reaches Claude. Accounting includes a Users entity for organisation users. Projects includes a different Users entity for project users.
+The catalogue below is the full set from both connectors: 26 accounting entities, 12 payroll entities for the UK and New Zealand, 15 payroll entities for Australia, 4 project entities, and 9 Xero Reports. Leave types, Pay runs, and Timesheets appear in both payroll lists because each region exposes them. One flow handles one category. Coupler.io's Join can stitch an Invoice to Profit And Loss before either reaches Claude. Accounting includes a Users entity for organisation users. Projects includes a different Users entity for project users.
 
 Accounting entities:
 
@@ -156,6 +156,18 @@ Projects:
 - **Tasks by projects** — Ask which tasks sit on those projects.
 - **Time by projects** — Ask how time was recorded against projects. For this entity the status control is titled Status.
 - **Users** — Project users. Ask who is on the projects. Keep this apart from organisation Users when the question is about access to the books rather than membership of a project.
+
+Xero Reports, chosen with **Report type**:
+
+- **Aged Payables By Contact** — Ask who you owe, contact by contact, as a statement rather than as the Bills list.
+- **Aged Receivables By Contact** — Ask who owes you, contact by contact.
+- **Balance Sheet** — Ask where assets, liabilities, and equity stand. **Report structure** applies to this report.
+- **Bank Statement** — Ask for the statement lines of the **Bank Account ID** you set.
+- **Bank Summary** — Ask for a shorter read of bank activity than the statement.
+- **Budget Summary** — Ask how the budget compares across the periods you set. **Report structure** applies here.
+- **Executive Summary** — Ask for the summary pack Xero builds for the organisation. **Report structure** applies here.
+- **Profit And Loss** — Ask for profit and loss as Xero's report, not as a sum you build from Invoices. **Report structure** applies here.
+- **Trial Balance** — Ask whether the accounts balance for the period on the report.
 
 ## Why export Xero to Claude — real life cases
 

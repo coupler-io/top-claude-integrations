@@ -2,7 +2,7 @@
 title: Connect QuickBooks to Claude with Coupler.io
 slug: connect-quickbooks-to-claude
 canonical: https://github.com/coupler-io/top-claude-integrations/blob/main/connect-quickbooks-to-claude.md
-source: QuickBooks Reports
+source: QuickBooks, QuickBooks Reports
 destination: Claude
 meta_title: Connect QuickBooks to Claude with Coupler.io
 meta_description: Send QuickBooks Profit and Loss Detail, Balance Sheet, and AR Aging Summary to Claude and ask finance questions in plain language.
@@ -16,7 +16,7 @@ QuickBooks will run Profit and Loss Detail, a Balance Sheet, and an AR Aging Sum
 
 ## How to export QuickBooks data to Claude
 
-One flow sends one report. The wizard covers the statements (Balance Sheet, Cash Flow, Trial Balance, Profit and Loss Summary, Profit and Loss Detail, Tax Summary), the aging and balance reports (AP Aging Detail, AP Aging Summary, AR Aging Detail, AR Aging Summary, Customer Balance, Customer Balance Detail, Vendor Balance, Vendor Balance Detail), the sales and spend cuts (Customer Income, Sales by Class Summary, Sales by Customer, Sales by Department, Sales by Product, Expenses by Vendor), and the lists and ledger (Account List Detail, General Ledger Detail, Inventory Valuation Summary, Journal Report, Transaction List, Transaction List by Customer, Transaction List by Vendor, Transaction List with Splits).
+Two connectors feed this page, and one flow still sends one category. QuickBooks is the records connector: Basic settings asks for **Data entity**, and Advanced settings are **Where**, **Order**, and **Split by**. QuickBooks Reports is the statements connector, and the steps below are that wizard. Its reports are Balance Sheet, Cash Flow, Trial Balance, Profit and Loss Summary, Profit and Loss Detail, Tax Summary, the aging and balance reports, the sales and spend cuts, and the ledger lists named further down.
 
 ### Step 1. Basic settings
 
@@ -78,7 +78,45 @@ Report name, Display columns by, Report period, Columns, and Report structure ca
 
 ## What data can you export from QuickBooks to Claude with Coupler.io?
 
-Twenty-eight reports are available, and one flow handles one report. Coupler.io's Join can stitch two reports before those reports reach Claude.
+Thirty-three QuickBooks records and twenty-eight QuickBooks Reports are available. One flow handles one of them. Coupler.io's Join can stitch a record, such as Invoice, to a report before Claude sees either.
+
+QuickBooks records, chosen with **Data entity**:
+
+- **Account** — Ask which accounts exist on the company file before a statement total needs a name.
+- **Attachable** — Ask which files are attached to transactions.
+- **Bill** — Ask which supplier bills are on file, as records rather than as an aging report.
+- **BillPayment** — Ask which payments have been applied to bills.
+- **Budget** — Ask what budget figures the company has stored.
+- **Class** — Ask which classes exist when a sales cut needs that label.
+- **CompanyInfo** — Ask for the company profile stored on the file.
+- **CreditMemo** — Ask which credit memos have been issued to customers.
+- **Customer** — Ask who the customers are, separate from Customer Balance.
+- **Department** — Ask which departments the file uses.
+- **Deposit** — Ask which bank deposits have been recorded.
+- **Employee** — Ask who is on the QuickBooks employee list. This is not a payroll report.
+- **Estimate** — Ask which estimates are still estimates.
+- **ExchangeRate** — Ask which exchange rates the file holds.
+- **Invoice** — Ask which customer invoices exist as records, separate from AR Aging Detail.
+- **Item** — Ask which products and services are on the item list.
+- **JournalEntry** — Ask for journal entries as records. Journal Report is the report view of the same idea.
+- **JournalCode** — Ask which journal codes the file uses.
+- **Payment** — Ask which customer payments have been recorded.
+- **PaymentMethod** — Ask which payment methods the company accepts.
+- **Preferences** — Ask what the company preferences contain.
+- **Purchase** — Ask which purchases, checks, and expenses are stored as purchases.
+- **PurchaseOrder** — Ask which purchase orders are open or recorded.
+- **RefundReceipt** — Ask which refund receipts have been issued.
+- **SalesReceipt** — Ask which sales receipts have been recorded.
+- **TaxAgency** — Ask which tax agencies are set up.
+- **TaxCode** — Ask which tax codes the file uses.
+- **TaxRate** — Ask which tax rates are stored.
+- **Term** — Ask which payment terms exist.
+- **TimeActivity** — Ask which time activities have been entered.
+- **Transfer** — Ask which transfers between accounts are recorded.
+- **Vendor** — Ask who the vendors are, separate from Vendor Balance.
+- **VendorCredit** — Ask which credits vendors have issued.
+
+QuickBooks Reports, chosen with **Report name**:
 
 - **Account List Detail** — Ask what each account is and how it is set up before you read a statement that depends on it.
 - **AP Aging Detail** — Ask which bills make up what you owe, as of the Report date.

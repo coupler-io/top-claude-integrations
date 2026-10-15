@@ -16,7 +16,7 @@ Shopify's admin is built to fulfill a single order and edit a single product. A 
 
 ## How to export Shopify data to Claude
 
-Each flow carries one entity. This wizard covers Orders, Customers, Inventory, Products, Products with variants, Orders with line items, Orders with activities, Orders transactions, Orders refunds transactions, Orders with refunded items, Orders with shipping lines, and Order fulfillments with line items.
+Each flow carries one category. The wizard's **Data entity** list covers Orders, Customers, Inventory, Products, Products with variants, Orders with line items, Orders with activities, Orders transactions, Orders refunds transactions, Orders with refunded items, Orders with shipping lines, and Order fulfillments with line items. Ready-made reports also exist as dataset templates, and those names are listed with the entities further down.
 
 ### Step 1. Basic settings
 
@@ -79,7 +79,7 @@ The agent can take Data entity, Columns, the date filters, and the advanced filt
 
 ## What data can you export from Shopify to Claude with Coupler.io?
 
-Twelve current categories are listed below, and one flow handles one category. Coupler.io's Join can stitch two of those categories together before Claude sees them.
+Twelve current **Data entity** categories are listed first, and one flow handles one category. Coupler.io's Join can stitch two of those categories together before Claude sees them. After them are the Shopify reports published as dataset templates.
 
 - **Orders** — Ask which checkouts became real purchases, and narrow the reply with Financial status or Fulfillment status so it comes back as a work list.
 - **Customers** — Ask who bought, who returned, and who has gone quiet, from the customer records rather than a page-by-page browse.
@@ -95,6 +95,30 @@ Twelve current categories are listed below, and one flow handles one category. C
 - **Order fulfillments with line items** — Ask what has already been fulfilled, down to the lines inside each fulfillment.
 
 Older entities remain selectable on Data entity for flows that already use them: Orders (legacy), Products (legacy), Inventory (legacy), Customers (legacy), Products with variants (legacy), Orders with line items (legacy), Orders with activities (legacy), Order fulfillments with line items (legacy), Orders with shipping lines (legacy), Orders refunds transactions (legacy).
+
+Shopify reports available as dataset templates:
+
+- **Shopify Returning customer rate** — Ask how many customers came back, against new customers, and what the returning customer rate was.
+- **Shopify inventory monthly stockout forecast** — Ask how many months of stock remain from net items sold, average sales, and available stock.
+- **Shopify inventory weekly stockout forecast** — Ask the same stock question in weeks, when a month is too coarse for replenishment.
+- **Shopify inventory daily stockout forecast** — Ask how many days of stock remain when a fast seller can empty a shelf inside a week.
+- **Shopify Sales by product variant** — Ask which variant sold, which came back, and what gross sales, net sales, and total sales that left.
+- **Shopify Sales by sources** — Ask which source produced the orders, the customers, and the average order value.
+- **Shopify top customers** — Ask who ordered the most, what they returned, and what total sales they account for.
+- **Shopify sales by order fulfillment status** — Ask how gross sales and returns split by fulfillment status.
+- **Shopify sales by order financial status** — Ask how orders, taxes, and total sales split by financial status.
+- **Shopify Sales by billing location** — Ask which billing country produced the orders, the customers, and the shipping charges.
+- **Shopify Total customers & Avg order value** — Ask how many customers you have and what the average order value is beside gross sales, net sales, and taxes.
+- **Shopify Top selling products** — Ask which products lead on net items sold, and what share of those units came back.
+- **Shopify Sales by new vs returning customers** — Ask how orders and total sales split between new customers and returning customers.
+- **Shopify Line Items with Shipping and Taxes** — Ask, line by line, for quantity, discount, returns, taxes, shipping charged, and total sales.
+- **Shopify Total sales by line item** — Ask for net items sold, discounts, returns, taxes, and total sales on each line.
+- **Shopify Total sales by order** — Ask for discounts, returns, taxes, and shipping charged on each order.
+- **Shopify Orders with COGS** — Ask for cost of goods, gross profit, and gross margin on the order, next to net sales and total sales.
+- **Shopify Line items with COGS** — Ask for the same profit figures on the line, including net returns and gross margin.
+- **Shopify and GA4 monthly performance** — A template that also uses Google Analytics. Ask how monthly sessions and checkouts sit next to Shopify orders and total sales.
+- **Shopify and GA4 weekly performance** — The same pairing, on a weekly grain: sessions, cart additions, and Shopify total sales.
+- **Shopify and GA4 daily performance** — The same pairing, day by day, so a traffic change can be read against that day's orders.
 
 ## Why export Shopify to Claude — real life cases
 
