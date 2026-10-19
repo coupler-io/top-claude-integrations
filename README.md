@@ -41,7 +41,7 @@ Every page follows the same order, so once you have read one you can skim the re
 | `meta_title` | Same as `title` |
 | `meta_description` | Search and social summary |
 
-The `source` field is worth a look before you go hunting in the app: the QuickBooks connector is listed as *QuickBooks Reports*, LinkedIn Public Data as *LinkedIn Company Pages*, YouTube Analytics as *YouTube*, Google Analytics as *Google Analytics 4 (GA4)*, Facebook Ads as *Facebook Ads (Meta Ads)*, and Microsoft Ads as *Microsoft Ads (Bing Ads)*.
+The `source` field is worth a look before you go hunting in the app. QuickBooks pages cover both *QuickBooks* and *QuickBooks Reports*. Xero pages cover both *Xero* and *Xero Reports*. LinkedIn Public Data is *LinkedIn Company Pages*, YouTube Analytics is *YouTube*, Google Analytics is *Google Analytics 4 (GA4)*, Facebook Ads is *Facebook Ads (Meta Ads)*, and Microsoft Ads is *Microsoft Ads (Bing Ads)*.
 
 ## Conventions
 
