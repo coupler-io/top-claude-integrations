@@ -80,8 +80,6 @@ Report name, Display columns by, Report period, Columns, and Report structure ca
 
 Thirty-three QuickBooks records and twenty-eight QuickBooks Reports are available. One flow handles one of them. Coupler.io's Join can stitch a record, such as Invoice, to a report before Claude sees either.
 
-QuickBooks records, chosen with **Data entity**:
-
 - **Account** — Ask which accounts exist on the company file before a statement total needs a name.
 - **Attachable** — Ask which files are attached to transactions.
 - **Bill** — Ask which supplier bills are on file, as records rather than as an aging report.
@@ -116,7 +114,7 @@ QuickBooks records, chosen with **Data entity**:
 - **Vendor** — Ask who the vendors are, separate from Vendor Balance.
 - **VendorCredit** — Ask which credits vendors have issued.
 
-QuickBooks Reports, chosen with **Report name**:
+> **Note:** The reports below are available in the **QuickBooks Reports** source in Coupler.io, separate from the QuickBooks source above. Pick QuickBooks Reports when you create the flow, then choose the report in **Report name**.
 
 - **Account List Detail** — Ask what each account is and how it is set up before you read a statement that depends on it.
 - **AP Aging Detail** — Ask which bills make up what you owe, as of the Report date.

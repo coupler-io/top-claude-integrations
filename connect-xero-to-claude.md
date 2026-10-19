@@ -157,7 +157,7 @@ Projects:
 - **Time by projects** — Ask how time was recorded against projects. For this entity the status control is titled Status.
 - **Users** — Project users. Ask who is on the projects. Keep this apart from organisation Users when the question is about access to the books rather than membership of a project.
 
-Xero Reports, chosen with **Report type**:
+> **Note:** The reports below are available in the **Xero Reports** source in Coupler.io, separate from the Xero source above. Pick Xero Reports when you create the flow, then choose the report in **Report type**.
 
 - **Aged Payables By Contact** — Ask who you owe, contact by contact, as a statement rather than as the Bills list.
 - **Aged Receivables By Contact** — Ask who owes you, contact by contact.
