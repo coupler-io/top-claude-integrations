@@ -25,7 +25,7 @@ Every page follows the same order, so once you have read one you can skim the re
 2. **Source and destination logos**, then the **H1**.
 3. **Intro paragraph** — the limitation in the source's own interface, and what Coupler.io does so Claude can answer from that data.
 4. **How to export `{source}` data to Claude** — the setup walkthrough. One `###` subsection per wizard step, in the order you meet them. Step names and field names are taken verbatim from the product. The final subsection is a bonus: describe the report in plain language and the Coupler.io AI Agent, in the app's right sidebar, configures the flow for you. That agent is separate from Claude itself.
-5. **What data can you export from `{source}` to Claude with Coupler.io?** — every data category the connector exposes, one bullet each, with what it is useful to ask about. Where a source offers dozens of report types, closely related ones are grouped but still named individually. Google Analytics has no report-type field, so its bullets are editorial groupings of real GA4 metric and dimension labels, and the page says so.
+5. **What data can you export from `{source}` to Claude with Coupler.io?** — every data category the connector exposes, one bullet each, with what it is useful to ask about. Where a source offers dozens of report types, closely related ones are grouped but still named individually.
 6. **Why export `{source}` to Claude — real life cases** — seven or eight concrete questions teams ask once the data is connected.
 7. **Other Claude integrations** — links to every other page in this repo.
 
@@ -41,15 +41,12 @@ Every page follows the same order, so once you have read one you can skim the re
 | `meta_title` | Same as `title` |
 | `meta_description` | Search and social summary |
 
-The `source` field is worth a look before you go hunting in the app. QuickBooks pages cover both *QuickBooks* and *QuickBooks Reports*. Xero pages cover both *Xero* and *Xero Reports*. LinkedIn Public Data is *LinkedIn Company Pages*, YouTube Analytics is *YouTube*, Google Analytics is *Google Analytics 4 (GA4)*, Facebook Ads is *Facebook Ads (Meta Ads)*, and Microsoft Ads is *Microsoft Ads (Bing Ads)*.
-
 ## Conventions
 
 - **Markdown only.** No HTML, so headings and lists stay machine-readable and the pages chunk cleanly for retrieval.
-- **Logos** are referenced from `static.coupler.io`, the same asset host the Coupler.io app uses, rather than committed as files. Claude's destination config key is `claude-desktop`, which has no SVG there. These pages use `claude.svg`, the file the marketing site already hot-links.
+- **Logos** are referenced from `static.coupler.io`, the same asset host the Coupler.io app uses, rather than committed as files.
 - **Cross-page links** are absolute GitHub URLs so they still resolve if a page is quoted or scraped out of context.
 - **Field and step names** are verbatim from the product. Only the explanatory copy around them is written for this repo.
-- Claude does not store a table. There is no dataset name, region, or replace-versus-append setting on these pages. The schedule refreshes the dataset Claude answers from.
 
 ## Integrations
 
