@@ -12,7 +12,7 @@ meta_description: Send Facebook Ads insights, sponsored leads, creatives, and in
 
 # Connect Facebook Ads to Claude with Coupler.io
 
-Ads Manager is comfortable when you are pausing a campaign or checking a single date range. It gets clumsy as soon as the question needs performance, lead forms, and invoices in the same breath, because those live in different corners of the product. A long comparison turns into another download. Coupler.io connects Facebook Ads (Meta Ads) and refreshes the one category you pick. Claude can then answer in ordinary language about Reports and Insights, List of Sponsored Leads, creatives, List of Activities, or List of Business invoices. You configure the flow once, and the schedule keeps the next answer lined up with the account.
+Ads Manager is comfortable when you are pausing a campaign or checking a single date range. It gets clumsy as soon as the question needs performance, lead forms, and invoices in the same breath, because those live in different corners of the product. A long comparison turns into another download. Coupler.io connects your Facebook Ads (Meta Ads) account and refreshes the one kind of data you choose. From there you can ask Claude the way you would ask a colleague: how spend and results moved last month, which leads came in through your lead forms, what your ads actually looked like, who changed a budget and when, or what Meta billed the business. You set the flow up once, and the schedule keeps Claude's next answer in step with the account.
 
 ## How to export Facebook Ads data to Claude
 
@@ -29,7 +29,7 @@ The wizard covers nine categories: Reports and Insights, List of Sponsored Leads
 
 Performance and structure categories use this window. List of Business invoices does not; it uses the date filters in the next step.
 
-- **Start date** — Where the Facebook Ads window opens. You can pick *last year* or *this year*, *last month* or *this month*, or *days ago*. Those choices move forward on later runs, so you are not editing the flow every Monday. A trailing year is `{{365daysago}}`.
+- **Start date** — Where the Facebook Ads window opens. You can pick *last year* or *this year*, *last month* or *this month*, or *days ago*. Those choices move forward on later runs, so you are not editing the flow every Monday. For windows the presets do not cover, use a macro instead. `{{2monthsago.startof(month)}}` starts on the first day of the month before last, and the window still moves forward on every run. See [Macros in data flows](https://docs.coupler.io/functionality/macros-in-data-flows) for the full list.
 - **End date** — Where the window closes. Leave it on a relative choice and each refresh still reaches the latest days.
 - **Split data by period** — Daily, Weekly, Monthly, or Totals only. Daily is the grain to pick when you will ask Claude what changed from one day to the next. Totals only is enough when you want one figure for the whole window.
 
