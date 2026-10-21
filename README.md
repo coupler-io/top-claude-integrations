@@ -4,50 +4,6 @@ Send data from marketing, sales, and finance apps to Claude with no code. Explor
 
 Each page in this repo covers one source and answers the same three questions: how do I set the export up, what data can I actually get, and why would I bother.
 
-## Where to find what
-
-| If you want to know | Go to |
-| --- | --- |
-| Which screens and fields the setup wizard has | **How to export** — one subsection per wizard step, with the real field names |
-| How to let the in-app AI Agent build the flow instead | **How to export → Bonus**, at the end of that section |
-| Which reports, objects, or entities are available | **What data can you export** — one bullet per data category |
-| Whether a specific metric or breakdown exists | **How to export → Metrics and dimensions** step, on sources that have one |
-| How often data can refresh | **How to export → Schedule** step |
-| How Claude gets connected | **How to export → Claude destination** step |
-| What other teams ask Claude | **Why export** — the use cases |
-| Another source that Claude can read | **Other Claude integrations**, at the bottom of any page |
-
-## How each page is structured
-
-Every page follows the same order, so once you have read one you can skim the rest.
-
-1. **Frontmatter** — machine-readable metadata (see below).
-2. **Source and destination logos**, then the **H1**.
-3. **Intro paragraph** — the limitation in the source's own interface, and what Coupler.io does so Claude can answer from that data.
-4. **How to export `{source}` data to Claude** — the setup walkthrough. One `###` subsection per wizard step, in the order you meet them. Step names and field names are taken verbatim from the product. The final subsection is a bonus: describe the report in plain language and the Coupler.io AI Agent, in the app's right sidebar, configures the flow for you. That agent is separate from Claude itself.
-5. **What data can you export from `{source}` to Claude with Coupler.io?** — every data category the connector exposes, one bullet each, with what it is useful to ask about. Where a source offers dozens of report types, closely related ones are grouped but still named individually.
-6. **Why export `{source}` to Claude — real life cases** — seven or eight concrete questions teams ask once the data is connected.
-7. **Other Claude integrations** — links to every other page in this repo.
-
-### Frontmatter fields
-
-| Field | Meaning |
-| --- | --- |
-| `title` | The page's H1 |
-| `slug` | URL-safe identifier, always matches the filename |
-| `canonical` | Self-referencing canonical URL for this page |
-| `source` | The connector's exact name in the Coupler.io app, which can differ slightly from the title |
-| `destination` | Always Claude in this repo |
-| `meta_title` | Same as `title` |
-| `meta_description` | Search and social summary |
-
-## Conventions
-
-- **Markdown only.** No HTML, so headings and lists stay machine-readable and the pages chunk cleanly for retrieval.
-- **Logos** are referenced from `static.coupler.io`, the same asset host the Coupler.io app uses, rather than committed as files.
-- **Cross-page links** are absolute GitHub URLs so they still resolve if a page is quoted or scraped out of context.
-- **Field and step names** are verbatim from the product. Only the explanatory copy around them is written for this repo.
-
 ## Integrations
 
 ### Ads and paid media
